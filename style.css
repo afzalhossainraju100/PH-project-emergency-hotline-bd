@@ -1,0 +1,8 @@
+:root {
+  --White: rgba(255, 255, 255, 1);
+}
+
+/* You can also create a custom utility class */
+.bg-white-custom {
+  background-color: var(--White, rgba(255, 255, 255, 1));
+}
