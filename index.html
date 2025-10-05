@@ -22,10 +22,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body class="bg-[#f5fff6]">
-    <nav class="bg-[#ffffff] w-full h-[100px]">
+    <nav class="bg-[#ffffff] w-full h-auto md:h-[100px]">
       <div
         id="nav-container"
-        class="flex justify-between items-center py-6 px-15 h-full"
+        class="flex flex-col md:flex-row justify-between items-center py-6 px-4 md:px-15 h-full gap-4 md:gap-0"
       >
         <div class="flex items-center gap-4">
           <img
@@ -39,7 +39,7 @@
           </h1>
         </div>
 
-        <div class="flex items-center gap-6">
+        <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-6">
           <div
             class="flex justify-center items-center gap-4 bg-[#41FF6B1A] p-3 rounded-3xl w-[123px] h-[52px]"
           >
@@ -72,7 +72,7 @@
     </nav>
     <!-- banner section -->
     <section
-      class="flex flex-col items-center justify-center bg-[linear-gradient(90deg,rgba(1,50,34,1),rgba(0,103,71,1)_50%,rgba(1,50,35,1)_100%)] w-full h-[239px] space-y-4"
+      class="flex flex-col items-center justify-center bg-[linear-gradient(90deg,rgba(1,50,34,1),rgba(0,103,71,1)_50%,rgba(1,50,35,1)_100%)] w-full h-auto py-8 lg:h-[239px] space-y-4 px-4"
     >
       <img
         class="w-[92px] h-[92px]"
@@ -80,20 +80,24 @@
         alt="govt logo"
       />
       <h1
-        class="text-[#ffffff] font-[Hind_Madurai] text-4xl font-bold leanding-[100%] text-center"
+        class="text-[#ffffff] font-[Hind_Madurai] text-2xl md:text-4xl font-bold leanding-[100%] text-center px-4"
       >
         Emergency Service Directory
       </h1>
       <p
-        class="text-[#ffffff] font-[Hind_Madurai] h-[28px] text-[20px] font-[600] leanding-[100%] text-center"
+        class="text-[#ffffff] font-[Hind_Madurai] h-auto md:h-[28px] text-[16px] md:text-[20px] font-[600] leanding-[100%] text-center px-4"
       >
         Government Emergency Services at Your Fingertip – A Project by
         Government of the People’s Republic of Bangladesh
       </p>
     </section>
     <section class="card-section">
-      <div class="card-container grid grid-cols-4 grid-rows-3 gap-4 p-8">
-        <div class="flex flex-col p-8 gap-4 rounded-2xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]">
+      <div
+        class="card-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 grid-rows-3 gap-4 p-4 md:p-8"
+      >
+        <div
+          class="flex flex-col p-4 md:p-8 gap-4 rounded-2xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]"
+        >
           <div class="flex justify-between items-center">
             <div class="bg-[#ffe3e2] p-4 rounded-lg">
               <img
@@ -142,8 +146,9 @@
           </div>
         </div>
 
-        <div class="flex flex-col p-8 gap-4 rounded-2xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]">
-  
+        <div
+          class="flex flex-col p-4 md:p-8 gap-4 rounded-2xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]"
+        >
           <div class="flex justify-between items-center">
             <div class="bg-[#dfefff] p-4 rounded-lg">
               <img
@@ -192,8 +197,9 @@
           </div>
         </div>
 
-        <div class="flex flex-col p-8 gap-4 rounded-2xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]">
-          
+        <div
+          class="flex flex-col p-4 md:p-8 gap-4 rounded-2xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]"
+        >
           <div class="flex justify-between items-center">
             <div class="bg-[#ffe3e2] p-4 rounded-lg">
               <img
@@ -213,7 +219,7 @@
             <p
               class="text-gray-500 text-[18px] font-[400] leanding-[100%] items-left"
             >
-             Fire Service
+              Fire Service
             </p>
           </div>
           <div class="">
@@ -243,7 +249,7 @@
         </div>
 
         <div
-          class="flex flex-col p-8 gap-4 h-full w-full justify-start items-start gap-4 p-6 rounded-lg shadow-sm bg-[#ffffff] col-start-4 col-end-5 row-start-1 row-end-4"
+          class="flex flex-col p-4 md:p-8 gap-4 h-full w-full justify-start items-start gap-4 p-6 rounded-lg shadow-sm bg-[#ffffff] lg:col-start-4 lg:col-end-5 lg:row-start-1 lg:row-end-4 order-last lg:order-none"
         >
           <div
             class="flex justify-between w-full items-center mb-4 bg-[#ffffff] rounded-lg"
@@ -289,7 +295,9 @@
           </div>
         </div>
 
-        <div class="flex flex-col p-8 gap-4 rounded-2xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]">
+        <div
+          class="flex flex-col p-4 md:p-8 gap-4 rounded-2xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]"
+        >
           <div class="flex justify-between items-center">
             <div class="bg-[#ffe3e2] p-4 rounded-lg">
               <img
@@ -338,7 +346,9 @@
           </div>
         </div>
 
-        <div class="flex flex-col p-8 gap-4 rounded-2xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]">
+        <div
+          class="flex flex-col p-4 md:p-8 gap-4 rounded-2xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]"
+        >
           <div class="flex justify-between items-center">
             <div class="bg-[#ffe3e2] p-4 rounded-lg">
               <img
@@ -365,7 +375,7 @@
             <h1
               class="text-[#111111] text-[24px] font-[700] leanding-[32px] items-left"
             >
-             109
+              109
             </h1>
             <p
               class="text-gray-500 text-[18px] font-[400] leanding-[100%] items-left p-2 bg-[#f2f2f2] w-[79px] h-[37px] items-center rounded-3xl flex justify-center"
@@ -387,7 +397,9 @@
           </div>
         </div>
 
-        <div class="flex flex-col p-8 gap-4 rounded-2xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]">
+        <div
+          class="flex flex-col p-4 md:p-8 gap-4 rounded-2xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]"
+        >
           <div class="flex justify-between items-center">
             <div class="bg-[#ffe3e2] p-4 rounded-lg">
               <img
@@ -435,7 +447,9 @@
             </button>
           </div>
         </div>
-        <div class="flex flex-col p-8 gap-4 rounded-2xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]">
+        <div
+          class="flex flex-col p-4 md:p-8 gap-4 rounded-2xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]"
+        >
           <div class="flex justify-between items-center">
             <div class="bg-[#ffe3e2] p-4 rounded-lg">
               <img
@@ -455,7 +469,7 @@
             <p
               class="text-gray-500 text-[18px] font-[400] leanding-[100%] items-left"
             >
-             Electricity Outage
+              Electricity Outage
             </p>
           </div>
           <div class="">
@@ -483,7 +497,9 @@
             </button>
           </div>
         </div>
-        <div class="flex flex-col p-8 gap-4 rounded-2xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]">
+        <div
+          class="flex flex-col p-4 md:p-8 gap-4 rounded-2xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]"
+        >
           <div class="flex justify-between items-center">
             <div class="bg-[#ffe3e2] p-4 rounded-lg">
               <img
@@ -498,7 +514,7 @@
             <h1
               class="text-[#111111] text-[24px] font-[700] leanding-[32px] items-left"
             >
-             Brac Helpline
+              Brac Helpline
             </h1>
             <p
               class="text-gray-500 text-[18px] font-[400] leanding-[100%] items-left"
@@ -531,7 +547,9 @@
             </button>
           </div>
         </div>
-        <div class="flex flex-col p-8 gap-4 rounded-2xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]">
+        <div
+          class="flex flex-col p-4 md:p-8 gap-4 rounded-2xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]"
+        >
           <div class="flex justify-between items-center">
             <div class="bg-[#ffe3e2] p-4 rounded-lg">
               <img
@@ -546,7 +564,7 @@
             <h1
               class="text-[#111111] text-[24px] font-[700] leanding-[32px] items-left"
             >
-              Bangladesh Railway Helpline 
+              Bangladesh Railway Helpline
             </h1>
             <p
               class="text-gray-500 text-[18px] font-[400] leanding-[100%] items-left"
