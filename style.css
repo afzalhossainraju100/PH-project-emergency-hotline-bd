@@ -1,8 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap");
+
 :root {
   --White: rgba(255, 255, 255, 1);
+  --Dark: rgba(17, 17, 17, 1);
 }
 
 /* You can also create a custom utility class */
 .bg-white-custom {
   background-color: var(--White, rgba(255, 255, 255, 1));
 }
+
+/* Custom font family utility */
