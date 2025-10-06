@@ -30,10 +30,17 @@ HeartIcon.forEach(function (HeartIcon) {
   });
 });
 //for copy section alert
-copyButton.forEach(function (copyButton) {
+copyButton.forEach(function (copyButton, index) {
   copyButton.addEventListener("click", function () {
-    copyCount++;
-    copyCountDisplay.textContent = copyCount;
+
+    const numberToCopy = phoneNumber[index].innerText;
+    navigator.clipboard
+      .writeText(numberToCopy)
+
+      
+        copyCount++;
+        copyCountDisplay.textContent = copyCount;
+        alert("Phone number copied: " + numberToCopy);
   });
 });
 //for call section alert
@@ -57,9 +64,9 @@ callButton.forEach(function (callButton, index) {
         date: new Date().toLocaleTimeString("en-US", { hour12: true }),
       };
       historyStore.push(data);
-    //   console.log("message length:", message.length);
-    //   console.log("phoneNumber length:", phoneNumber.length);
-    //   console.log("servicesName length:", servicesName.length);
+      //   console.log("message length:", message.length);
+      //   console.log("phoneNumber length:", phoneNumber.length);
+      //   console.log("servicesName length:", servicesName.length);
       //history solve
       historyContainer.innerHTML = "";
       if (historyStore.length > 0) {
