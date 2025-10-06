@@ -7,10 +7,15 @@ const callButton = document.querySelectorAll(".call-btn");
 const message = document.querySelectorAll(".message");
 const phoneNumber = document.querySelectorAll(".number");
 const servicesName = document.querySelectorAll(".service-name");
+const clearBtn = document.getElementById("clear-btn");
+const copyCountDisplay = document.getElementById("copy-count-display");
 //coin problem soleve
-// const coinCountDisplay = document.getElementById("coin-count-display");
-// let coin = parseInt(coinCountDisplay.innerText);
-// console.log(coin);
+
+//clear button function
+clearBtn.addEventListener("click", function () {
+  historyStore.length = 0; //
+  historyContainer.innerHTML = "";
+});
 
 //history problem solve
 const historyStore = [];
@@ -28,25 +33,58 @@ callButton.forEach(function(callButton, index){
         const coinCountDisplay = document.getElementById("coin-count-display");
         let coin = parseInt(coinCountDisplay.innerText);
         if(coin >=20){
-        alert("calling " + message[index].innerText + " at " + phoneNumber[index].innerText+"...");
-        coin -=20;
-        coinCountDisplay.innerText = coin;
-        const data = {
-          name: servicesName[index].innerText,
-          number: phoneNumber[index].innerText,
-          date: new Date().toLocaleString()
-        };
-        historyStore.push(data);
-        localStorage.setItem("callHistory", JSON.stringify(historyStore));
-        console.log(historyStore);
-
-    }else{
+          alert(
+            "calling " +
+              message[index].innerText +
+              " at " +
+              phoneNumber[index].innerText +
+              "..."
+          );
+          coin -= 20;
+          coinCountDisplay.innerText = coin;
+          const data = {
+            name: servicesName[index].innerText,
+            number: phoneNumber[index].innerText,
+            date: new Date().toLocaleString(),
+          };
+          historyStore.push(data);
+          //history solve
+          historyContainer.innerHTML = "";
+          if (historyStore.length > 0) {
+            for (const data of historyStore) {
+              const div = document.createElement("div");
+              div.innerHTML = `
+                    <div
+              class="flex justify-between w-full items-center bg-[#fafafa] p-1 rounded-lg"
+            >
+              <div class="flex flex-col leanding-tight gap-1">
+                <h1
+                  class="service-name text-[#111111] text-[18px] font-[600] leanding-[100%] items-left"
+                >
+                  ${data.name}
+                </h1>
+                <p
+                  class="text-[#5c5c5c] text-[18px] font-[400] leanding-[100%] items-left"
+                >
+                  ${data.number}
+                </p>
+              </div>
+              <div>
+                <p
+                  class="text-[#111111] text-[18px] font-[400] leanding-[100%] items-left"
+                >
+                  ${data.date}
+                </p>
+              </div>
+            </div>
+        `;
+              historyContainer.appendChild(div);
+            }
+          }
+        }else{
         alert("You don't have enough coins to make a call.");
         return ;
     }
     });
 
 });
-
-//history solve
-
